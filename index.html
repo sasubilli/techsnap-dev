@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ade8425e40.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet" />
+    <title>Postman Import/Export - Collection & Environment</title>
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+    
+    
+    
+    <nav class="navbar navbar-light bg-light sticky-top fixed-top">
+        <a class="navbar-brand " href="#" id="Logo">
+            <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+                width="60px" height="40px">
+        </a>
+        <form class="form-inline" id="search_bar">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                id="search_input">
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+
+        </form>
+        <div class="form-inline mx-5 nav_btn">
+            <button class="btn btn" type="button">Login</button>
+            <button class="btn btn-sm p-2" type="button">Create Account</button>
+        </div>
+
+    </nav>
+    <section class="main py-4">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col btn-outline-primary" id="icon_sticky">
+                        <i class="fas fa-heart"id="icon_1">6</i>
+                        <i class="fas fa-horse-head"id="icon_1">2</i>
+                        <i class="far fa-bookmark"id="icon_1">5</i>
+                        <i class="fas fa-chevron-circle-down"id="icon_1"></i>
+                </div> -->
+                <!-- <div class="position-static">...</div>
+                <div class="position-relative">...</div>
+                <div class="position-absolute">...</div>
+                <div class="position-fixed">...</div>
+                <div class="position-sticky">...</div> -->
+                <section class="d-grid gap-3 col-sm-1 px-2 position-sticky "  >
+                <div class="card px-2">
+                    <ul class="list-group list-group-flush">
+                        <i class="fas fa-heart"id="icon_1">6</i>
+                        <i class="fas fa-horse-head"id="icon_1">2</i>
+                        <i class="far fa-bookmark"id="icon_1">5</i>
+                        <i class="fas fa-chevron-circle-down"id="icon_1"></i>
+
+                    </ul>
+                  </div>
+                  </section>
+                <section class="col-8  px-5 ">
+                    <div class="overflow-hidden">
+                        <img
+                           src="https://res.cloudinary.com/practicaldev/image/fetch/s--7ZNPWZK6--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wywkzexkghg3xojgfesv.png">   
+                        </div>
+                    <div class="container py-2">
+                        <div class="container_1">
+                            <div class="image">
+                                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--zCOcq9Sw--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/426933/80d9086a-12e5-406b-91b4-845a608f9ae0.jpg" class="rounded-circle">
+                            </div>
+                            <div id="img_text">
+                                <h5>Dilpreet Johal <br> Posted on 30 May</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h1 class="text-dark">Postman Import/Export – Collection & Environment</h1>
+                    </div>
+                    <div id="click_btn">
+                        <a href="Testing" class="btn" >#Testing</a>
+                        <a href="Tutorial" class="btn">#Tutorial</a>
+                        <a href="Beginner" class="btn">#Beginner</a>
+                        <a href="WebDev" class="btn">#Webdev</a>
+                    </div>
+                    <div class="card" id="content_card" style="width:20rem">
+                        <div class=" card-header">
+                          <b> Postman API Testing (17 Part Series) </b>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1. Posting API Testing Tutorial Series</li>
+                            <li class="list-group-item">2. Make API request with Postman</li>
+                            <li class="list-group-item">... 13 more parts...</li>
+                            <li class="list-group-item">16. Postman File Upload(Image & Video)</li>
+                            <b><li class="list-group-item">17. Postman Import/Export - Collection & Environment</li></b>
+                        </ul>
+                    </div>
+                    <br>
+                    <p>In this post, I will cover how to do import or export of Collection & Environment in Postman. Importing or Exporting data such as Collection and Environment are a great way to share or request data with others.</p>
+                    <h4>Use Case</h4>
+                    <br>
+                    <p>When you are working with Postman, you typically add bunch of requests related to a project which you can then group them into collections. And, now let’s imagine, if a new team member joins your project and she needs access to those requests, you will have to give her all these request info one by one which will take a really long time. Instead you can simply export your collection, which she can then import into Postman and will have access to all the requests and the related info.</p>
+                    <p>Now ideally, if you have a teams license with postman you can just add her to the team and call it a day but not all companies have that so this is a good alternative to work with.</p>
+                    <b><h4>Check out the video below to learn how to Import and Export Postman Collection and Environment –</h4></b>
+                    <div id="youtube">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8hRK5cE9dzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <br>
+                    <p>If you are interested in learning more about Postman, check out this Postman playlist –</p>
+                    
+                    <a href="https://youtu.be/XzoIYpQ_k5E?list=PL6AdzyjjD5HCiZyLYZqjRrB15gHLs8uyV">https://youtu.be/XzoIYpQ_k5E?list=PL6AdzyjjD5HCiZyLYZqjRrB15gHLs8uyV </a>
+                    <hr>
+                    📧 Subscribe to my <a href="mailing list.html">mailing list</a>
+                     to get access to more content like this as well as be part of amazing free giveaways.
+                    <br>
+                    👍 You can follow my content here as well -
+                    <ul>
+                        <li><a href="Twitter.html">Twitter</a></li>
+                        <li><a href="LinkedIn.html">LinkedIn</a></li>
+                    </ul>
+                    ...
+                    <br>
+                    I love coffees! And, if this post helped you out and you would like to support my work, you can do that by clicking on the button below and buying me a cup of coffee -
+                    <div class="coffee">
+                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--lUHFj71T--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/4aw2ub3f4qkyjk0ivwt4.png">
+                    </div>
+                    You can also support me by liking and sharing this content.
+                    <br>
+                    Thanks for reading!
+                    <br>
+                    <div class="card" id="content_card" style="width:20rem;">
+                        <div class=" card-header">
+                          <b> Postman API Testing (17 Part Series) </b>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1. Posting API Testing Tutorial Series</li>
+                            <li class="list-group-item">2. Make API request with Postman</li>
+                            <li class="list-group-item">... 13 more parts...</li>
+                            <li class="list-group-item">16. Postman File Upload(Image & Video)</li>
+                            <b><li class="list-group-item">17. Postman Import/Export - Collection & Environment</li></b>
+                        </ul>
+                    </div>
+                    <hr>
+                    <br>
+                    <div>
+                    <b><h3>Discussion(0)</h3></b>
+                    <div class="Subsciber_logo">
+                        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--zCOcq9Sw--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/426933/80d9086a-12e5-406b-91b4-845a608f9ae0.jpg" class="rounded-circle">
+
+                    </div>
+                    <a href="Subscribe" class="btn" id="Subscibe_btn">Subscribe</a>
+                    </div>
+                    <br>
+                    <form class="Discussion" id="discussion_bar">
+                        <input class="form-control mr-md-2" type="form" placeholder="Add to the Discussion" aria-label="Add to the Discussion"
+                            id="search_input">
+                    </form>
+                    <br>
+                    <footer class="crayons-footer print-hidden">
+                        <div id="footer-container" class="crayons-footer__container">
+                          <p class="fs-s crayons-footer__description">
+                            <a class="c fw-medium" aria-label="DEV Community Home" href="/">DEV Community</a> — A constructive and inclusive social network for software developers. With you every step of your journey.
+                          </p>
+                          <div class="fs-s">
+                            <p>Built on <a class="c" target="_blank"  href="forem.html">Forem</a> — the <a target="_blank" rel="noopener" class="c-link c-link--branded" href="opensource.html">open source</a> software that powers <a target="_blank"  class="c-link c-link--branded" href="https://dev.to">DEV</a> and other inclusive communities.</p>
+                            <p>Made with love and <a href="Ruby on Rails.html">Ruby on Rails</a>. DEV Community <span title="copyright">©</span> 2016 - 2022.</p>
+                          </div>
+                          <a href="forem.html" target="_blank" rel="noopener" class="c-link c-link c-link--block c-link--icon-alone self-center">
+                            <svg xmlns="" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-labelledby="ar58suwf8r57d1btefzgc1vdn6qitejm" class="crayons-icon crayons-icon--default c-link__icon"><title id="ar58suwf8r57d1btefzgc1vdn6qitejm">Forem logo</title>
+                          <g clip-path="url(#clip0)" fill="#1AB3A6">
+                              <path d="M4.603 1.438a8.056 8.056 0 017.643 5.478 8.543 8.543 0 00-3.023 5.968H8.054C3.606 12.884 0 9.296 0 4.87V1.468a.03.03 0 01.03-.03h4.573zM23.97 6.515a.03.03 0 01.03.03v2.833c0 4.11-3.354 7.442-7.491 7.442h-2.881v5.726h-2.305V14.53l.022-1.145c.294-3.843 3.526-6.87 7.469-6.87h5.155z"></path>
+                          </g>
+                          <defs>
+                              <clipPath id="clip0">
+                                  <path fill="#fff" d="M0 0h24v24H0z"></path>
+                              </clipPath>
+                          </defs>
+                      </svg>
+                      
+                          </a>
+                        </div>
+                      </footer>
+                    </section>
+                    
+                 <div class="col-sm-3 ">
+                    <div class="d-grid gap-3 ">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <div class="Subsciber_logo">
+                                    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--zCOcq9Sw--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/426933/80d9086a-12e5-406b-91b4-845a608f9ae0.jpg" class="rounded-circle">
+            
+                                </div>
+
+                                <h5 class="card-title">Dilpreet Johal</h5>
+                                <a href="#" class="btn btn-primary">Follow</a>
+                                <p class="card-text">Simplifying the Test Automation Process. Check out my YouTube channel @AutomationBro.</p>
+                                 <p>
+                                    <b>LOCATION</b>
+                                    <br>
+                                    Toronto, Canada
+                                    <br>
+                                   <b>JOINED</b>
+                                    <br>
+                                    Jul 8, 2020</p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="card text-center" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">More from Dilpreet Johal</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Postamn File Upload(Image & Video)<br>
+                                    #api #Testing #Beginner #Tutorial</li> 
+                                    <li class="list-group-item">Cypress vs WebdriverIO| Which One to pick?<br>
+                                    #javascript #Testing #Webdev #Automation</li> 
+                                    <li class="list-group-item">Selenium 4.0 - Major Changes<br>
+                                     #Testing #Webdev #programming #javascript</li> 
+
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
